@@ -1,0 +1,34 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    border-bottom: 3px solid var(--varColorPrimary);
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.item{
+    list-style: none;
+    font-family: var(--varTipografyTwo);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.item:hover{
+    color: var(--varColorSecundary);
+}
+
+.contentUserCart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    width: 150px;
+}
