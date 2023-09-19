@@ -1,0 +1,17 @@
+.contentCard{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card{
+    width: 200px;
+    height: 180px;
+    border: 1px solid black;
+    padding: 10px 30px;
+}
+
+.image{
+    width: 100%;
+}

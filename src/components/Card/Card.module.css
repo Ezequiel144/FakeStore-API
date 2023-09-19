@@ -1,0 +1,39 @@
+.contentCard{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.contentImage{
+    width: 100%;
+}
+
+.image{
+    width: 100%;
+    object-fit: cover;
+    /* border: 1px solid red; */
+}
+
+.contentText{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #343a40;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 5px;
+}
+
+.text{
+    font-size: 1.3rem;
+    color: var(--varColorPrimary);
+    font-family: var(--varTipografyTwo);
+    text-align: center;
+}
