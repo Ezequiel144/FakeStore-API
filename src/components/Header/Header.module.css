@@ -1,9 +1,12 @@
 .header{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     height: 80px;
+    padding: 0 150px;
     /* border-bottom: 3px solid var(--varColorPrimary); */
+    background-color: #65C8D0;
 }
 
 .list{
