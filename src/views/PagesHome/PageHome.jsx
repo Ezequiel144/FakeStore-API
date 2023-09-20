@@ -1,34 +1,33 @@
-import Card from "../../components/Card/Card";
-import CardHome from "../../components/CardHome/CardHome";
-import Carrusel from "../../components/Carrusel/Carrusel";
-import Title from "../../components/Title/Title";
 import pagesHomeStyle from './PageHome.module.css';
-import useFetch from "../../hook/useFetch";
+import { useContext } from "react";
+import {myProducContext} from "../../contexts/ProductContext";
+import Card from '../../components/Card/Card';
 
 export default function PagesHome(){
 
-    const { data } = useFetch('https://fakestoreapi.com/products');
-    
+    const {data,loading} = useContext(myProducContext)
+
     return(
         <div className={pagesHomeStyle.contentPagesHome}>
-            <Title titleMain="Destacated"/>
             <article>
-                <CardHome />
+                <img src="" alt="image Main" />
             </article>
-            {/* <Carrusel /> */}
-            <section className={pagesHomeStyle.contentCardHome}>
-                {data?.map(d => {
-                    return (
-                        <>  
+            <article className={pagesHomeStyle.contentCardHome}>
+                {loading && <p>Loading...</p>}
+                {
+                    data?.map(d => {
+                        return( 
                             <Card 
+                                key={d.id}
                                 title={d.title}
                                 image={d.image}
                                 category={d.category}
                             />
-                        </>
-                    )
-                })}
-            </section>
+                        )
+                    })
+                }
+            </article>
+            
         </div>
     )
 }

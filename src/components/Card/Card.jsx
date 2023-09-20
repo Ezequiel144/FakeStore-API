@@ -1,5 +1,4 @@
 import cardStyle from './Card.module.css';
-import useFetch from '../../hook/useFetch';
 
 export default function Card({title,image,category}){
 
@@ -9,8 +8,8 @@ export default function Card({title,image,category}){
                 <img className={cardStyle.image} src={image} alt={title} />
             </section>
             <section className={cardStyle.contentText}>
-                <h2 className={cardStyle.text}>{title}</h2>
-                {/* <h3 className={cardStyle.text}>{category}</h3> */}
+                <h3 className={cardStyle.category}>{category}</h3>
+                <h2 className={cardStyle.title}>{title}</h2>
             </section>
         </div>
     )

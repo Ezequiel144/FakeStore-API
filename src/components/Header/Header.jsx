@@ -1,6 +1,6 @@
 import headerStyle from './Header.module.css';
 
-const navbar = [
+/* const navbar = [
     {
         id : 1,
         title: 'Home',
@@ -14,20 +14,20 @@ const navbar = [
         title:'Contact',
     }
 ];
-
+ */
 export default function Header(){
     return(
         <header className={headerStyle.header}>
             <div className={headerStyle.logo}>
                 <img src="" alt="ImgLogo"/>
             </div>
-            <ul className={headerStyle.list}>
+            {/* <ul className={headerStyle.list}>
                 {
                     navbar.map(data => {
                         return <li key={data.id} className={headerStyle.item}>{data.title}</li>
                     })
                 }
-            </ul>
+            </ul> */}
             <div className={headerStyle.contentUserCart}>
                 <img src="" alt="User" />
                 <img src="" alt="Cart" />

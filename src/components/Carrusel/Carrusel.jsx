@@ -1,26 +1,24 @@
+import { useEffect, useState } from "react"
 
-import useFetch from '../../hook/useFetch';
+export default function Carrusel({data}){
 
-export default function Carrusel(){
-    const { data } = useFetch('https://fakestoreapi.com/products');
-    /* const [img,setImg] = useState({}); */
+    const [dataImage,setDataImage] = useState(data);
 
-    //const [dataCarrusel,setDataCarrusel] = useState(data);
-
-    
-    console.log(data[0].image);
+    useEffect(()=>{
+        console.log(dataImage);
+    },[])
 
     return(
         <div id="carouselExample" className="carousel slide">
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src={data[0]} className="d-block w-100" alt="..."/>
+                    <img src={""} className="d-block w-100" alt="img1"/>
                 </div>
                 <div className="carousel-item">
-                    <img src={data[1]} className="d-block w-100" alt="..."/>
+                    <img src={""} className="d-block w-100" alt="img2"/>
                 </div>
                 <div className="carousel-item">
-                    <img src={data[2]} className="d-block w-100" alt="..."/>
+                    <img src={""} className="d-block w-100" alt="img3"/>
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

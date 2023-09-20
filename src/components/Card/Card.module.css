@@ -1,39 +1,41 @@
 .contentCard{
-    width: 100%;
-    height: 400px;
+    width: 300px;
+    height: 440px;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
-    border-radius: 25px;
 }
 
 .contentImage{
+    height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--varColorPrimary);
+    cursor: pointer;
 }
 
 .image{
-    width: 100%;
+    width: 50%;
     object-fit: cover;
     /* border: 1px solid red; */
 }
 
 .contentText{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #343a40;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px 5px;
+    padding: 10px 0px;
 }
 
-.text{
-    font-size: 1.3rem;
-    color: var(--varColorPrimary);
+.category{
+    color: var(--varColorSecundary);
     font-family: var(--varTipografyTwo);
-    text-align: center;
+    font-size: 0.8rem;
+}
+
+.title{
+    color: var(--varColorLetter);
+    font-family: var(--varTipografyUno);
+    font-size: 0.9rem;
+    font-weight: 700;
 }
