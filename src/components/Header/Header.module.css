@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 80px;
-    border-bottom: 3px solid var(--varColorPrimary);
+    /* border-bottom: 3px solid var(--varColorPrimary); */
 }
 
 .list{

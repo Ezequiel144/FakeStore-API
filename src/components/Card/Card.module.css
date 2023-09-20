@@ -5,7 +5,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    row-gap: 10px;
 }
 
 .contentImage{
@@ -20,17 +20,19 @@
 .image{
     width: 50%;
     object-fit: cover;
+    margin: auto;
     /* border: 1px solid red; */
 }
 
 .contentText{
-    padding: 10px 0px;
 }
 
 .category{
     color: var(--varColorSecundary);
     font-family: var(--varTipografyTwo);
     font-size: 0.8rem;
+    text-align: left;
+    width: 100%;
 }
 
 .title{
@@ -38,4 +40,6 @@
     font-family: var(--varTipografyUno);
     font-size: 0.9rem;
     font-weight: 700;
+    text-align: left;
+    width: 100%;
 }
