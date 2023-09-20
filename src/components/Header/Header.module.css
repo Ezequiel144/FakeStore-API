@@ -4,9 +4,23 @@
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    padding: 0 150px;
+    padding: 0 30px;
     /* border-bottom: 3px solid var(--varColorPrimary); */
     background-color: #65C8D0;
+}
+
+@media (min-width: 750px) {
+    .header{
+        padding: 0 150px;
+    }
+}
+
+.logo{
+    width: 70px;
+}
+
+.imageLogo{
+    width: 100%;
 }
 
 .list{
@@ -33,5 +47,10 @@
     flex-direction: row;
     align-items: center;
     justify-content:space-between;
-    width: 150px;
+    width: 100px;
+}
+
+.user, .cart{
+    width: 35px;
+    cursor: pointer;
 }

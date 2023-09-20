@@ -1,25 +1,13 @@
 import headerStyle from './Header.module.css';
+import logo from '../../assets/logo/Fake-removebg-preview-cortado.png'
+import user from '../../assets/icons/usuario.png'
+import cart from '../../assets/icons/anadir-al-carrito.png'
 
-/* const navbar = [
-    {
-        id : 1,
-        title: 'Home',
-    },
-    {
-        id : 2,
-        title:'Products',
-    },
-    {
-        id : 3,
-        title:'Contact',
-    }
-];
- */
 export default function Header(){
     return(
         <header className={headerStyle.header}>
             <div className={headerStyle.logo}>
-                <img src="" alt="ImgLogo"/>
+                <img className={headerStyle.imageLogo} src={logo} alt="ImgLogo"/>
             </div>
             {/* <ul className={headerStyle.list}>
                 {
@@ -29,8 +17,8 @@ export default function Header(){
                 }
             </ul> */}
             <div className={headerStyle.contentUserCart}>
-                <img src="" alt="User" />
-                <img src="" alt="Cart" />
+                <img className={headerStyle.user} src={user} alt="User" />
+                <img className={headerStyle.cart} src={cart} alt="Cart" />
             </div>
         </header>
     )
