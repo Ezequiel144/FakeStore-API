@@ -2,6 +2,7 @@ import pagesHomeStyle from './PageHome.module.css';
 import { useContext } from "react";
 import {myProducContext} from "../../contexts/ProductContext";
 import Card from '../../components/Card/Card';
+import imageMain from '../../assets/image/forest-5889923_1920.png'
 
 export default function PagesHome(){
 
@@ -9,8 +10,8 @@ export default function PagesHome(){
 
     return(
         <div className={pagesHomeStyle.contentPagesHome}>
-            <article>
-                <img src="" alt="image Main" />
+            <article className={pagesHomeStyle.contentImage}>
+                <img className={pagesHomeStyle.image} src={imageMain} alt="image Main" />
             </article>
             <article className={pagesHomeStyle.contentCardHome}>
                 {loading && <p>Loading...</p>}
