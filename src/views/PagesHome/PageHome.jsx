@@ -3,6 +3,7 @@ import { useContext } from "react";
 import {myProducContext} from "../../contexts/ProductContext";
 import Card from '../../components/Card/Card';
 import imageMain from '../../assets/image/forest-5889923_1920.png'
+import Title from '../../components/Title/Title';
 
 export default function PagesHome(){
 
@@ -13,6 +14,7 @@ export default function PagesHome(){
             <article className={pagesHomeStyle.contentImage}>
                 <img className={pagesHomeStyle.image} src={imageMain} alt="image Main" />
             </article>
+            <Title titleMain={"Productos"}/>
             <article className={pagesHomeStyle.contentCardHome}>
                 {loading && <p>Loading...</p>}
                 {
@@ -20,6 +22,7 @@ export default function PagesHome(){
                         return( 
                             <Card 
                                 key={d.id}
+                                id={d.id}
                                 title={d.title}
                                 image={d.image}
                                 category={d.category}
