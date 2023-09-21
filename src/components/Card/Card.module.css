@@ -13,8 +13,13 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    border: 1px solid var(--varColorPrimary);
+    border: 2px solid var(--varColorPrimary);
     cursor: pointer;
+}
+
+.contentImage:hover{
+    transition: 0.5s;
+    border: 2px solid var(--varColorSecundary);
 }
 
 .image{

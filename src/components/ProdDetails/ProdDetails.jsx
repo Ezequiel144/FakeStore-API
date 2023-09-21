@@ -1,6 +1,7 @@
-import { myProducContext } from '../../contexts/ProductContext';
+/* eslint-disable react/prop-types */
 import prodDetailsStyle from './ProdDetails.module.css';
 
+// eslint-disable-next-line react/prop-types
 export default function ProdDetails({prod}){
 
     const {title,category,description,image,price} = prod;
