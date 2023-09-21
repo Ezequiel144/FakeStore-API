@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     column-gap: 50px;
-    background-color: white;
+    /* background-color: white; */
     margin: auto;
     max-width: 900px;
     height: 100vh;

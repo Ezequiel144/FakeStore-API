@@ -2,11 +2,10 @@
 import { Link } from 'react-router-dom';
 import cardStyle from './Card.module.css';
 
-export default function Card({value,id,title,image,category}){
+export default function Card({id,title,image,category}){
 
     return(
         <div className={cardStyle.contentCard}>
-            {console.log(value)}
             <Link to={`/${id}`} className={cardStyle.contentImage}>
                 <img className={cardStyle.image} src={image} alt={title} />
             </Link>

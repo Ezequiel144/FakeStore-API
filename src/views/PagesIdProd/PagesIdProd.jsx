@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom"
 import { useContext } from "react";
 import { myProducContext } from "../../contexts/ProductContext";
 import ProdDetails from "../../components/ProdDetails/ProdDetails";
-
+import idProdStyle from './PagesidProd.module.css';
 
 export default function PagesIdProd(){
     const {data,loading} = useContext(myProducContext);
@@ -15,10 +15,10 @@ export default function PagesIdProd(){
         setProduc(produc.find(d => d.id === parseInt(prod)));
     },[prod])
     
-    
+
 
     return(
-        <div>
+        <div className={idProdStyle.contentIdProd}>
             {loading && <p>loading</p>}
             <ProdDetails 
                 prod = {produc}

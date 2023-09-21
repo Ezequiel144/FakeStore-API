@@ -15,8 +15,7 @@ export default function PagesHome(){
         return setValueCate(value)
     }
 
-    let cardFilter = data.filter(d => d.category === valueCate)
-    console.log(cardFilter);
+    let cardFilter = valueCate === 'All' ? data : data.filter(d => d.category === valueCate);
 
     return(
         <div className={pagesHomeStyle.contentPagesHome}>
@@ -32,8 +31,7 @@ export default function PagesHome(){
                 {   
                     cardFilter?.map(d => {
                         return( 
-                            <Card
-                                value = {valueCate} 
+                            <Card 
                                 key={d.id}
                                 id={d.id}
                                 title={d.title}
