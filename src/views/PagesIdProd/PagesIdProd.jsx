@@ -15,6 +15,7 @@ export default function PagesIdProd(){
         setProduc(produc.find(d => d.id === parseInt(prod)));
     },[prod])
     
+    
 
     return(
         <div>

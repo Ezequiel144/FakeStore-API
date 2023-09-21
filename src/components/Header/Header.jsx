@@ -2,13 +2,14 @@ import headerStyle from './Header.module.css';
 import logo from '../../assets/logo/Fake-removebg-preview-cortado.png'
 import user from '../../assets/icons/usuario.png'
 import cart from '../../assets/icons/anadir-al-carrito.png'
+import { Link } from 'react-router-dom';
 
 export default function Header(){
     return(
         <header className={headerStyle.header}>
-            <div className={headerStyle.logo}>
+            <Link to={'/'} className={headerStyle.logo}>
                 <img className={headerStyle.imageLogo} src={logo} alt="ImgLogo"/>
-            </div>
+            </Link>
             {/* <ul className={headerStyle.list}>
                 {
                     navbar.map(data => {

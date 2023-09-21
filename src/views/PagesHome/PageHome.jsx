@@ -4,6 +4,7 @@ import {myProducContext} from "../../contexts/ProductContext";
 import Card from '../../components/Card/Card';
 import imageMain from '../../assets/image/forest-5889923_1920.png'
 import Title from '../../components/Title/Title';
+import CategoryCard from '../../components/CategoryCard/CategoryCard';
 
 export default function PagesHome(){
 
@@ -15,6 +16,7 @@ export default function PagesHome(){
                 <img className={pagesHomeStyle.image} src={imageMain} alt="image Main" />
             </article>
             <Title titleMain={"Productos"}/>
+            <CategoryCard />
             <article className={pagesHomeStyle.contentCardHome}>
                 {loading && <p>Loading...</p>}
                 {

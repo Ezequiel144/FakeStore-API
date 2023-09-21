@@ -1,4 +1,5 @@
 :root {
+  
   background-color: white;
   color: #343a40;
 
@@ -12,6 +13,7 @@
   --varColorPrimary : #99e2b4;
   --varColorSecundary: #BFC2C5;
   --varColorLetter: #343a40;
+  --varColorSecundary-hover: #d5d8db;
 
   /*- TYPOGRAFI -*/
   --varTipografyUno: 'Montserrat', sans-serif;
@@ -22,6 +24,4 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* max-width: 1450px; */
-  /* margin: auto; */
 }
