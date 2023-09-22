@@ -8,7 +8,7 @@ import CategoryCard from '../../components/CategoryCard/CategoryCard';
 
 export default function PagesHome(){
     const [valueCate,setValueCate] = useState('All');
-    const {data,loading} = useContext(myProducContext)
+    const {data,loading,error} = useContext(myProducContext)
 
     const handleOnChange = (e) => {
         const {value} = e.currentTarget;
@@ -27,8 +27,10 @@ export default function PagesHome(){
                 handleOnChange = {handleOnChange}
             />
             <article className={pagesHomeStyle.contentCardHome}>
+                
                 {loading && <p>Loading...</p>}
-                {   
+                {error && <p>{error}</p>}
+                {  
                     cardFilter?.map(d => {
                         return( 
                             <Card 

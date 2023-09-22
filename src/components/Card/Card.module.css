@@ -14,19 +14,92 @@
     display: flex;
     justify-content: center;
     border: 2px solid var(--varColorPrimary);
-    cursor: pointer;
-}
-
-.contentImage:hover{
-    transition: 0.5s;
-    border: 2px solid var(--varColorSecundary);
+    position: relative;
 }
 
 .image{
-    width: 50%;
+    width: 40%;
     object-fit: cover;
     margin: auto;
     /* border: 1px solid red; */
+    
+}
+
+/* .image:hover{
+    transition: 0.5s all;
+    transform: scale(1.2);
+} */
+
+.imageHover{
+    width: 40%;
+    object-fit: cover;
+    margin: auto;
+    transition: 0.5s all;
+    transform: scale(1.2);
+}
+
+.contentButton{
+    position: absolute;
+    right: 0px;
+    top: 10%;
+    transform: translateY(-10%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    opacity: 0;
+}
+
+.contentButtonHover{
+    position: absolute;
+    top: 10%;
+    transform: translateY(-10%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    transition: 0.5s all;
+    right: 15px;
+    opacity: 1;
+}
+
+/* .contentButton:hover{
+    transition: 0.5s all;
+    right: 15px;
+    opacity: 1;
+} */
+
+.add{
+    background-color: var(--varColorButton);
+    border: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detail{
+    background-color: var(--varColorSecundary);
+    border: 0;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.iconAdd{
+    width: 30%;
+}
+
+.iconOjo{
+    width: 50%;
 }
 
 .category{
