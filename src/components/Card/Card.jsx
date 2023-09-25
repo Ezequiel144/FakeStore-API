@@ -10,9 +10,9 @@ export default function Card({id,title,image,category}){
     const [mouseEnter,setMouseEnter] = useState(false);
 
     return(
-        <div className={cardStyle.contentCard}  onPointerEnter={()=>setMouseEnter(true)} onPointerLeave={() => setMouseEnter(false)}>
+        <div className={cardStyle.contentCard}>
             {/* <p>{mouseEnter ? "true" : "false"}</p> */}
-            <div className={cardStyle.contentImage}>
+            <div className={cardStyle.contentImage} onPointerEnter={()=>setMouseEnter(true)} onPointerLeave={() => setMouseEnter(false)}>
                 <img className={mouseEnter ? cardStyle.imageHover : cardStyle.image} src={image} alt={title} />
                 <div className={mouseEnter ? cardStyle.contentButtonHover : cardStyle.contentButton}>
                     <button className={cardStyle.add}>
