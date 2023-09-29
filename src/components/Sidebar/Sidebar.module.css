@@ -8,11 +8,25 @@
     left: -100%;
     height: 100vmax;
     transition: 0.5s all;
+    padding: 10px ;
+}
+
+.contentText{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.title{
+    font-family: var(--varTipografyUno);
+    font-size: 1.3rem;
+    text-transform: uppercase;
 }
 
 .contentClose{
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
 }
 

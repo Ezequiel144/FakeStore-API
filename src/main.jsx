@@ -5,15 +5,18 @@ import './index.css';
 import Provider from './contexts/ProductContext.jsx';
 import Category from './contexts/Category.jsx';
 import SidebarContext from './contexts/SidebarContext.jsx';
+import CartContext from './contexts/CartContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <SidebarContext>
-      <Category>
-        <Provider>
-          <App />
-        </Provider>
-      </Category>
-    </SidebarContext>
+    <CartContext>
+      <SidebarContext>
+        <Category>
+          <Provider>
+            <App />
+          </Provider>
+        </Category>
+      </SidebarContext>
+    </CartContext>
   </React.StrictMode>,
 )

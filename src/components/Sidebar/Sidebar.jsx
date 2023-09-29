@@ -1,20 +1,41 @@
 import { useContext } from "react";
 import { sidebar } from "../../contexts/SidebarContext";
 import sidebarStyle from './Sidebar.module.css';
-import iconX from '../../assets/icons/x.png'
+import iconX from '../../assets/icons/x.png';
+import { cartContextProvider } from "../../contexts/CartContext";
+import CardShop from "../CardShop/CardShop";
 
 export default function Sidebar (){
 
     // eslint-disable-next-line no-unused-vars
+    const {cart,setCart} = useContext(cartContextProvider);
+    // eslint-disable-next-line no-unused-vars
     const {open,handleOpenCloes} = useContext(sidebar);
 
     let conditionSidebar = open ? '0' : '-100%';
-    console.log(conditionSidebar)
     return(
         <div className={sidebarStyle.sidebar} style={{left: conditionSidebar}}>
-            <div className={sidebarStyle.contentClose} onClick={handleOpenCloes}>
-                <img className={sidebarStyle.close} src={iconX} alt="iconX" />
-            </div>
+            <section className={sidebarStyle.contentText}>
+                <h2 className={sidebarStyle.title}>Shop Cart</h2>
+                <div className={sidebarStyle.contentClose} onClick={handleOpenCloes}>
+                    <img className={sidebarStyle.close} src={iconX} alt="iconX" />
+                </div>
+            </section>
+            <section className={sidebarStyle.contentCardProd}>
+                {
+                    cart.map(c => {
+                        return(
+                            <CardShop
+                                price = {c.price * c.amount}
+                                description = {c.description}
+                                image = {c.image} 
+                                title = {c.title}
+                                key = {c.id}
+                            />
+                        )
+                    })
+                }
+            </section>
         </div>
     )
 }

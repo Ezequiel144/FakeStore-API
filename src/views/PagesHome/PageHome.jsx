@@ -33,12 +33,13 @@ export default function PagesHome(){
                 {  
                     cardFilter?.map(d => {
                         return( 
-                            <Card 
+                            <Card
+                                prod={d} 
                                 key={d.id}
-                                id={d.id}
+                                /* id={d.id}
                                 title={d.title}
                                 image={d.image}
-                                category={d.category}
+                                category={d.category} */
                             />
                         )
                     })
