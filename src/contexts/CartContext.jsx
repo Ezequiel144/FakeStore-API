@@ -9,19 +9,25 @@ export default function CartContext({ children }){
 
     const addToCart = (id,prod) => {    
         const newProd = {...prod,amount: 1};
-        const cartItem = cart.some(c => c.id === id);
-
+        const cartItem = cart.find(c => c.id === id);
+        
         if(cartItem){
-            [...cart].map(c => {
-                c.amount += 1
+            const newCart = [...cart].map(c => {
+                if(c.id === id){
+                    return {...c,amount: cartItem.amount + 1}
+                }else{
+                    return c;
+                }
             })
+            setCart(newCart);
         }else{
-            setCart(
+            return setCart(
                 [...cart,newProd]
             );
         }
     }
 
+    console.log(cart)
     return(
         <cartContextProvider.Provider value={{cart,setCart,addToCart}}>
             { children }

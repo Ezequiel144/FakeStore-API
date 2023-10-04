@@ -26,10 +26,7 @@ export default function Sidebar (){
                     cart.map(c => {
                         return(
                             <CardShop
-                                price = {c.price * c.amount}
-                                description = {c.description}
-                                image = {c.image} 
-                                title = {c.title}
+                                data = {c}
                                 key = {c.id}
                             />
                         )

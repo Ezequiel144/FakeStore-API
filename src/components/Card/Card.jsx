@@ -14,7 +14,7 @@ export default function Card({prod}){
     const {cart,setCart,addToCart} = useContext(cartContextProvider);
     const [mouseEnter,setMouseEnter] = useState(false);
 
-    console.log(cart);
+    //console.log(cart);
 
     return(
         <div className={cardStyle.contentCard}>

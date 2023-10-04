@@ -36,10 +36,6 @@ export default function PagesHome(){
                             <Card
                                 prod={d} 
                                 key={d.id}
-                                /* id={d.id}
-                                title={d.title}
-                                image={d.image}
-                                category={d.category} */
                             />
                         )
                     })

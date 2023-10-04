@@ -6,9 +6,10 @@
     top: 0;
     /* left: 0; */
     left: -100%;
-    height: 100vmax;
+    height: 100vh;
     transition: 0.5s all;
     padding: 10px ;
+    overflow-y: auto;
 }
 
 .contentText{
@@ -33,6 +34,10 @@
 .close{
     width: 100%;
 }
+
+/* .contentCardProd{
+    overflow-y:scroll;
+} */
 
 @media (min-width:600px) {
     
