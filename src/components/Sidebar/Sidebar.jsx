@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { sidebar } from "../../contexts/SidebarContext";
 import sidebarStyle from './Sidebar.module.css';
 import iconX from '../../assets/icons/x.png';
@@ -32,6 +32,10 @@ export default function Sidebar (){
                         )
                     })
                 }
+            </section>
+            <section className={sidebarStyle.contentTotal}>
+                <div className={sidebarStyle.liner}></div>
+                <h5 className={sidebarStyle.text}>total:{}</h5>
             </section>
         </div>
     )

@@ -27,6 +27,8 @@ export default function CartContext({ children }){
         }
     }
 
+    
+
     console.log(cart)
     return(
         <cartContextProvider.Provider value={{cart,setCart,addToCart}}>

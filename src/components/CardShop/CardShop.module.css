@@ -1,0 +1,28 @@
+.contentCard{
+    border: 1px solid var(--varColorSecundary);
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100px;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.image{
+    width: 60px;
+}
+
+.title{
+    text-align: left;
+    max-width: 300px;
+    font-family: var(--varTipografyUno);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.price{
+    font-family: var(--varTipografyUno);
+    font-weight: 700;
+}
