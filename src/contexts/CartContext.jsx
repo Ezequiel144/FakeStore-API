@@ -4,7 +4,6 @@ export const cartContextProvider = createContext();
 
 // eslint-disable-next-line react/prop-types
 export default function CartContext({ children }){
-
     const [cart,setCart] = useState([]);
 
     const addToCart = (id,prod) => {    
@@ -27,11 +26,18 @@ export default function CartContext({ children }){
         }
     }
 
+    const deleteCard = (id) => {
+        const newCart = cart.filter(c => c.id !== id);
+        setCart(newCart);
+    }
     
+    const empty = () => {
+        setCart([]);
+    }
 
-    console.log(cart)
+    //console.log(cart)
     return(
-        <cartContextProvider.Provider value={{cart,setCart,addToCart}}>
+        <cartContextProvider.Provider value={{cart,setCart,addToCart,deleteCard,empty}}>
             { children }
         </cartContextProvider.Provider>
     )

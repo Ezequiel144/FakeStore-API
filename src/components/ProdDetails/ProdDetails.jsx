@@ -2,9 +2,9 @@
 import prodDetailsStyle from './ProdDetails.module.css';
 
 // eslint-disable-next-line react/prop-types
-export default function ProdDetails({prod}){
+export default function ProdDetails({produc}){
 
-    const {title,category,description,image,price} = prod;
+    const {title,category,description,image,price} = produc;
 
     return(
         <div className={prodDetailsStyle.contentDetails}>

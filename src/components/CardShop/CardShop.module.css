@@ -1,13 +1,26 @@
 .contentCard{
-    border: 1px solid var(--varColorSecundary);
-    padding: 0 15px;
+    border-bottom: 1px solid var(--varColorCardShop);
+    padding: 20px 15px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px 10px;
     width: 100%;
     min-height: 100px;
     height: fit-content;
-    border-radius: 10px;
+    position: relative;
+}
+
+.cardSectionOne{
+    display: flex;
+    align-items: center;
+    gap: 0 25px;
+}
+
+.cardSectionTwo{
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    height: 35px;
 }
 
 .image{
@@ -20,9 +33,39 @@
     font-family: var(--varTipografyUno);
     font-size: 1rem;
     font-weight: 400;
+    text-transform: uppercase;
+    color: var(--varColorLetter);
+    text-decoration: none;
+}
+
+.title:hover{
+    text-decoration:underline;
+    cursor: pointer;
+}
+.priceUnit{
+    font-family: var(--varTipografyUno);
+    color: var(--varColorCardShop);
+    height: 100%;
+    line-height: 200%;
 }
 
 .price{
     font-family: var(--varTipografyUno);
     font-weight: 700;
+    height: 100%;
+    line-height: 200%;
+}
+
+.contentX{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 28px;
+    cursor: pointer;
+}
+
+.x{
+    font-family: var(--varTipografyUno);
+    font-size: 1.2rem;
+    font-weight: 400;
 }

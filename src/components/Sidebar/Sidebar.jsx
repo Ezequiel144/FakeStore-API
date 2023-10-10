@@ -4,11 +4,12 @@ import sidebarStyle from './Sidebar.module.css';
 import iconX from '../../assets/icons/x.png';
 import { cartContextProvider } from "../../contexts/CartContext";
 import CardShop from "../CardShop/CardShop";
+import iconDelete from '../../assets/icons/borrar.png';
 
 export default function Sidebar (){
 
     // eslint-disable-next-line no-unused-vars
-    const {cart,setCart} = useContext(cartContextProvider);
+    const {cart,empty} = useContext(cartContextProvider);
     // eslint-disable-next-line no-unused-vars
     const {open,handleOpenCloes} = useContext(sidebar);
 
@@ -34,8 +35,10 @@ export default function Sidebar (){
                 }
             </section>
             <section className={sidebarStyle.contentTotal}>
-                <div className={sidebarStyle.liner}></div>
-                <h5 className={sidebarStyle.text}>total:{}</h5>
+                <h5 className={sidebarStyle.text}>total:{0}</h5>
+                <div className={sidebarStyle.contentIconDelete}>
+                    <img className={sidebarStyle.iconDelete} src={iconDelete} alt="delete" onClick={empty}/>
+                </div>
             </section>
         </div>
     )

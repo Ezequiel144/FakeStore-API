@@ -12,16 +12,16 @@ export default function PagesIdProd(){
     const {prod} = useParams();
 
     useEffect(()=>{
-        setProduc(produc.find(d => d.id === parseInt(prod)));
+        setProduc(data.find(d => d.id === parseInt(prod)));
     },[prod])
-    
 
+    console.log(produc)
 
     return(
         <div className={idProdStyle.contentIdProd}>
             {loading && <p>loading</p>}
             <ProdDetails 
-                prod = {produc}
+                produc = {produc}
             />
         </div>
     )

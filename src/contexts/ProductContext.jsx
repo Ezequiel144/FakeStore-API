@@ -7,7 +7,7 @@ export const myProducContext = createContext();
 // eslint-disable-next-line react/prop-types
 export default function Provider( {children} ){
     const {data,loading} = useFetch('https://fakestoreapi.com/products');
-    
+
     return(
         <myProducContext.Provider value={{data,loading}}>
             {children}
