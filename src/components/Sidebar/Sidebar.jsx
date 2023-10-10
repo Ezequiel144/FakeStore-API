@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { sidebar } from "../../contexts/SidebarContext";
 import sidebarStyle from './Sidebar.module.css';
 import iconX from '../../assets/icons/x.png';

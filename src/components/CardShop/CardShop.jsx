@@ -18,7 +18,10 @@ export default function CardShop({data}){
                 <Link to={`/${id}`} className={cardShopStyle.title}>{title}</Link>
             </section>
             <section className={cardShopStyle.cardSectionTwo}>
-                <Cont />
+                <Cont
+                    amount = {amount} 
+                    id = {id}
+                />
                 <p className={cardShopStyle.priceUnit}>${price}</p>
                 <p className={cardShopStyle.price}>${price * amount}</p>
             </section>

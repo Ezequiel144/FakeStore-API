@@ -15,8 +15,6 @@ export default function PagesIdProd(){
         setProduc(data.find(d => d.id === parseInt(prod)));
     },[prod])
 
-    console.log(produc)
-
     return(
         <div className={idProdStyle.contentIdProd}>
             {loading && <p>loading</p>}

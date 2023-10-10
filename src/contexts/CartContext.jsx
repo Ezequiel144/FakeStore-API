@@ -35,9 +35,17 @@ export default function CartContext({ children }){
         setCart([]);
     }
 
+    const increment = (id) => {
+        console.log('amount increment',id);
+    }
+
+    const decrement = (id) => {
+        console.log('amount decrement',id);
+    }
+
     //console.log(cart)
     return(
-        <cartContextProvider.Provider value={{cart,setCart,addToCart,deleteCard,empty}}>
+        <cartContextProvider.Provider value={{cart,setCart,addToCart,deleteCard,empty,increment,decrement}}>
             { children }
         </cartContextProvider.Provider>
     )
