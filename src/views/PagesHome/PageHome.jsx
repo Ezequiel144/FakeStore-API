@@ -29,7 +29,7 @@ export default function PagesHome(){
             <article className={pagesHomeStyle.contentCardHome}>
                 
                 {loading && <p>Loading...</p>}
-                {error && <p>{error}</p>}
+                {error && <p>{error} No se puedieron cargar los productos</p>}
                 {  
                     cardFilter?.map(d => {
                         return( 

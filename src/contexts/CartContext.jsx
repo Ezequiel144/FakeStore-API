@@ -1,4 +1,6 @@
 import { createContext, useState } from "react";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const cartContextProvider = createContext(); 
 
@@ -24,6 +26,7 @@ export default function CartContext({ children }){
                 [...cart,newProd]
             );
         }
+        alertToast();
     }
 
     const deleteCard = (id) => {
@@ -36,14 +39,37 @@ export default function CartContext({ children }){
     }
 
     const increment = (id) => {
-        console.log('amount increment',id);
+        const amountIncrement = cart.find(c => c.id === id);
+        if(amountIncrement){
+            const newCart = [...cart].map(c => {
+                if(c.id === id){
+                    return {...c,amount: c.amount + 1}
+                }else{
+                    return c;
+                }
+            })
+            setCart(newCart);
+        }
     }
 
     const decrement = (id) => {
-        console.log('amount decrement',id);
+        const amountIncrement = cart.find(c => c.id === id);
+        if(amountIncrement){
+            const newCart = [...cart].map(c => {
+                if(c.id === id){
+                    return {...c,amount: c.amount - 1}
+                }else{
+                    return c;
+                }
+            })
+            setCart(newCart);
+        }
     }
 
-    //console.log(cart)
+    const alertToast = () => {
+        toast("Producto Agregado");
+    }
+
     return(
         <cartContextProvider.Provider value={{cart,setCart,addToCart,deleteCard,empty,increment,decrement}}>
             { children }

@@ -23,7 +23,7 @@ export default function CardShop({data}){
                     id = {id}
                 />
                 <p className={cardShopStyle.priceUnit}>${price}</p>
-                <p className={cardShopStyle.price}>${price * amount}</p>
+                <p className={cardShopStyle.price}>${parseFloat(price * amount).toFixed(2)}</p>
             </section>
             <div className={cardShopStyle.contentX}>
                 <p className={cardShopStyle.x} onClick={() => deleteCard(id)}>X</p>
