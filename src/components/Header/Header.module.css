@@ -7,8 +7,11 @@
     padding: 0 30px;
     /* border-bottom: 3px solid var(--varColorPrimary); */
     /* background-color: #65C8D0; */
-    background: linear-gradient(#397b7f,#65C8D0);
-    
+    /* background: linear-gradient(#397b7f,#65C8D0); */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 
