@@ -10,8 +10,8 @@
     justify-items: center;
     grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
     gap: 100px 50px; 
-       
 }
+
 
 .contentImage{
     width:100vw;

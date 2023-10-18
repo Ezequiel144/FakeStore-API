@@ -1,3 +1,10 @@
 .contentIdProd{
     background: white;
+    animation: pass 1s alternate;
+}
+
+@keyframes pass {
+    0%{
+        opacity: 0;
+    }
 }

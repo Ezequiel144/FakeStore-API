@@ -6,6 +6,18 @@
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    animation: animacion 1s alternate;
+}
+
+@keyframes animacion{
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-20px);
+        opacity: 1;
+    }
 }
 
 .contentImage{
@@ -21,14 +33,7 @@
     width: 40%;
     object-fit: cover;
     margin: auto;
-    /* border: 1px solid red; */
-    
 }
-
-/* .image:hover{
-    transition: 0.5s all;
-    transform: scale(1.2);
-} */
 
 .imageHover{
     width: 40%;

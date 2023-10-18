@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -7,6 +7,7 @@ export const cartContextProvider = createContext();
 // eslint-disable-next-line react/prop-types
 export default function CartContext({ children }){
     const [cart,setCart] = useState([]);
+    const [amountCart,setAmountCart] = useState()
 
     const addToCart = (id,prod) => {    
         const newProd = {...prod,amount: 1};
@@ -20,13 +21,14 @@ export default function CartContext({ children }){
                     return c;
                 }
             })
+            alertToast();
             setCart(newCart);
         }else{
+            alertToast();
             return setCart(
                 [...cart,newProd]
             );
         }
-        alertToast();
     }
 
     const deleteCard = (id) => {
@@ -57,7 +59,7 @@ export default function CartContext({ children }){
         if(amountIncrement){
             const newCart = [...cart].map(c => {
                 if(c.id === id){
-                    return {...c,amount: c.amount - 1}
+                    return {...c,amount: c.amount < 2 ? c.amount = 1 : c.amount - 1/* c.amount - 1 */}
                 }else{
                     return c;
                 }
@@ -67,11 +69,21 @@ export default function CartContext({ children }){
     }
 
     const alertToast = () => {
-        toast("Producto Agregado");
+        toast.success("Producto Agregado",{
+            position: "top-center",
+            autoClose: 1500
+        });
     }
 
+    useEffect(()=>{
+        const newAmountCart = cart.reduce((acc,item) => {
+            return acc + item.amount;
+        },0);
+        setAmountCart(newAmountCart);
+    },[cart])
+
     return(
-        <cartContextProvider.Provider value={{cart,setCart,addToCart,deleteCard,empty,increment,decrement}}>
+        <cartContextProvider.Provider value={{cart,setCart,addToCart,deleteCard,empty,increment,decrement,amountCart}}>
             { children }
         </cartContextProvider.Provider>
     )

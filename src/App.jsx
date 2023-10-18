@@ -5,6 +5,7 @@ import Header from './components/Header/Header'
 import PagesIdProd from './views/PagesIdProd/PagesIdProd'
 import Sidebar from './components/Sidebar/Sidebar'
 import { ToastContainer } from 'react-toastify';
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/' Component={PagesHome} />
           <Route path='/:prod' Component={PagesIdProd}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   )

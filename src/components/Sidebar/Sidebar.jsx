@@ -35,7 +35,7 @@ export default function Sidebar (){
                 }
             </section>
             <section className={sidebarStyle.contentTotal}>
-                <h5 className={sidebarStyle.text}>total:{0}</h5>
+                <h5 className={sidebarStyle.text}>Total:{0}</h5>
                 <div className={sidebarStyle.contentIconDelete}>
                     <img className={sidebarStyle.iconDelete} src={iconDelete} alt="delete" onClick={empty}/>
                 </div>
