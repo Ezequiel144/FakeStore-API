@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { sidebar } from "../../contexts/SidebarContext";
 import sidebarStyle from './Sidebar.module.css';
-import iconX from '../../assets/icons/x.png';
+import iconX from '../../assets/icons/salida-de-emergencia.png';
 import { cartContextProvider } from "../../contexts/CartContext";
 import CardShop from "../CardShop/CardShop";
 import iconDelete from '../../assets/icons/borrar.png';
