@@ -5,7 +5,13 @@
     /* margin-top: 100px; */
     display: flex;
     align-items: center;
-    min-height: 900px;
+    height: 1000px;
+}
+
+@media (max-width:500px){
+    .contentIdProd{
+        min-height: 1200px;
+    }
 }
 
 @keyframes pass {
