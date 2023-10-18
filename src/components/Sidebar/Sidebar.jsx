@@ -9,7 +9,7 @@ import iconDelete from '../../assets/icons/borrar.png';
 export default function Sidebar (){
 
     // eslint-disable-next-line no-unused-vars
-    const {cart,empty} = useContext(cartContextProvider);
+    const {cart,empty,totalValue} = useContext(cartContextProvider);
     // eslint-disable-next-line no-unused-vars
     const {open,handleOpenCloes} = useContext(sidebar);
 
@@ -35,7 +35,7 @@ export default function Sidebar (){
                 }
             </section>
             <section className={sidebarStyle.contentTotal}>
-                <h5 className={sidebarStyle.text}>Total:{0}</h5>
+                <h5 className={sidebarStyle.text}>Total $ {parseFloat(totalValue).toFixed(2)}</h5>
                 <div className={sidebarStyle.contentIconDelete}>
                     <img className={sidebarStyle.iconDelete} src={iconDelete} alt="delete" onClick={empty}/>
                 </div>

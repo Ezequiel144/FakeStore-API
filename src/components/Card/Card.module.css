@@ -7,15 +7,16 @@
     flex-direction: column;
     row-gap: 10px;
     animation: animacion 1s alternate;
+    transition: 0.5s all;
 }
 
 @keyframes animacion{
     0% {
-        transform: translateX(50px);
+        transform: scale(0);
         opacity: 0;
     }
-    50%{
-        transform: translateX(-20px);
+    100%{
+        transform: scale(1);
         opacity: 1;
     }
 }

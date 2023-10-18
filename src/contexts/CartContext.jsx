@@ -2,12 +2,14 @@ import { createContext, useEffect, useState } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const cartContextProvider = createContext(); 
 
 // eslint-disable-next-line react/prop-types
 export default function CartContext({ children }){
+    const [totalValue,setTotalValue] = useState(0);
     const [cart,setCart] = useState([]);
-    const [amountCart,setAmountCart] = useState()
+    const [amountCart,setAmountCart] = useState();
 
     const addToCart = (id,prod) => {    
         const newProd = {...prod,amount: 1};
@@ -38,6 +40,10 @@ export default function CartContext({ children }){
     
     const empty = () => {
         setCart([]);
+        toast.info("Empty ShopCart",{
+            position: "top-center",
+            autoClose: 1500
+        });
     }
 
     const increment = (id) => {
@@ -69,7 +75,7 @@ export default function CartContext({ children }){
     }
 
     const alertToast = () => {
-        toast.success("Producto Agregado",{
+        toast.success("Product Added",{
             position: "top-center",
             autoClose: 1500
         });
@@ -82,8 +88,17 @@ export default function CartContext({ children }){
         setAmountCart(newAmountCart);
     },[cart])
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    useEffect(() => {
+        const newTotal = cart.reduce((acc,item) => {
+            return acc + item.price * item.amount;
+        },0);
+        setTotalValue(newTotal);
+    },[cart])
+
+
     return(
-        <cartContextProvider.Provider value={{cart,setCart,addToCart,deleteCard,empty,increment,decrement,amountCart}}>
+        <cartContextProvider.Provider value={{cart,setCart,addToCart,deleteCard,empty,increment,decrement,amountCart,totalValue}}>
             { children }
         </cartContextProvider.Provider>
     )

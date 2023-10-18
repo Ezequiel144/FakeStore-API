@@ -21,3 +21,9 @@
     background-color: transparent;
     color: var(--varColorLetter);
 }
+
+.copy{
+    font-family: var(--varTipografyTwo);
+    text-align: center;
+    font-size: 1rem;
+}
