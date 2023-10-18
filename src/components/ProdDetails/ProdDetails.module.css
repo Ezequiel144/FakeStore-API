@@ -6,7 +6,8 @@
     /* background-color: white; */
     margin: auto;
     max-width: 900px;
-    height: 100vh;
+    height: 100%;
+    /* border: 1px solid red; */
 }
 
 @media (max-width:750px) {
