@@ -6,17 +6,20 @@ import Provider from './contexts/ProductContext.jsx';
 import Category from './contexts/Category.jsx';
 import SidebarContext from './contexts/SidebarContext.jsx';
 import CartContext from './contexts/CartContext.jsx';
+import providerAuth from './contexts/AuthContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <CartContext>
-      <SidebarContext>
-        <Category>
-          <Provider>
-            <App />
-          </Provider>
-        </Category>
-      </SidebarContext>
-    </CartContext>
+    <providerAuth>
+      <CartContext>
+        <SidebarContext>
+          <Category>
+            <Provider>
+              <App />
+            </Provider>
+          </Category>
+        </SidebarContext>
+      </CartContext>
+    </providerAuth>
   </React.StrictMode>,
 )

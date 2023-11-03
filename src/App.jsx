@@ -7,6 +7,7 @@ import Sidebar from './components/Sidebar/Sidebar'
 import { ToastContainer } from 'react-toastify';
 import Footer from './components/Footer/Footer'
 import PageLogin from './views/PageLogin/PageLogin'
+import PageRegister from './views/PageRegister/PageRegiste'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Header />
         <Sidebar />
         <Routes>
+          <Route path='/register' Component={PageRegister} />
           <Route path='/login' Component={PageLogin} />
           <Route path='/' Component={PagesHome} />
           <Route path='/:prod' Component={PagesIdProd}></Route>
