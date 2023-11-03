@@ -5,6 +5,7 @@ import Card from '../../components/Card/Card';
 import imageMain from '../../assets/image/forest-5889923_1920.png'
 import Title from '../../components/Title/Title';
 import CategoryCard from '../../components/CategoryCard/CategoryCard';
+import Carousel from '../../components/Carousel/Carousel';
 
 export default function PagesHome(){
     const [valueCate,setValueCate] = useState('All');
@@ -20,6 +21,15 @@ export default function PagesHome(){
     return(
         <div className={pagesHomeStyle.contentPagesHome}>
             <article className={pagesHomeStyle.contentImage}>
+                <div className={pagesHomeStyle.contentText}>
+                    <div className={pagesHomeStyle.contentMainText}>
+                        <h1 className={pagesHomeStyle.mainTitle}>Welcome to <span className={pagesHomeStyle.titleDif}>FAKE STORE</span></h1>
+                        <p className={pagesHomeStyle.description}>
+                            the store with a wide variety of products and confidence in each purchase
+                        </p>
+                    </div>
+                    <Carousel />
+                </div>
                 <img className={pagesHomeStyle.image} src={imageMain} alt="image Main" />
             </article>
             <Title titleMain={"Products"}/>

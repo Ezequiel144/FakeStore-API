@@ -1,0 +1,38 @@
+.content{
+    width: 30%;
+    height: 30%;
+}
+
+.contentSlide{
+    width: 100%;
+    height: 100%;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contentItem{
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0 20px;
+
+    .item{
+        padding: 10px;
+        border-radius: 100%;
+        border: 0;
+        /* background-color: var(--varColorPrimary); */
+    }
+}
+
+@media (max-width: 1023px){
+    .content{
+        display: none;
+    }
+}
