@@ -3,23 +3,21 @@
     align-items: center;
     justify-content: center;
     column-gap: 50px;
-    /* background-color: white; */
-    margin: auto;
-    max-width: 900px;
-    height: 100%;
-    /* border: 1px solid red; */
+    max-width: 800px;
+    height: 400px;
 }
 
 @media (max-width:750px) {
     .contentDetails{
         flex-direction: column;
         row-gap: 50px;
+        padding: 100px 0;
+        height: fit-content;
     }
 }
 
 .contentImage{
     width: 30%;
-
     .image{
         width: 100%;
     }
@@ -64,12 +62,14 @@
 .addCart{
     padding: 5px 10px;
     border: 0;
-    background-color: var(--varColorSecundary-hover);
+    background-color: var(--varColorLetter);
+    color: var(--varColorCardShop);
     font-family: var(--varTipografyUno);
     font-size: 1rem;
     width: 180px;
 }
 
 .addCart:hover{
-    background-color: var(--varColorSecundary);
+    transition: 0.2s all;
+    transform: scale(1.2);
 }

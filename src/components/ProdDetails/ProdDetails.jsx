@@ -21,7 +21,6 @@ export default function ProdDetails({produc}){
                 <p className={prodDetailsStyle.price}>$ {price}</p>
                 <button className={prodDetailsStyle.addCart} onClick={() => addToCart(id,produc)}>Add to Cart</button>
             </section>
-
         </div>
     )
 }

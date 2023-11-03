@@ -34,7 +34,10 @@ export default function Header(){
                 }
             </ul> */}
             <div className={headerStyle.contentUserCart}>
+                <Link to={'/login'}>
                 <img className={headerStyle.user} src={user} alt="User" />
+                </Link>
+                
                 <div className={headerStyle.contentCart} onClick={() => setOpen(!open)}>
                     <img className={headerStyle.cart} src={imgCart} alt="Cart" />
                     {

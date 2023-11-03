@@ -7,20 +7,22 @@ import ProdDetails from "../../components/ProdDetails/ProdDetails";
 import idProdStyle from './PagesidProd.module.css';
 
 export default function PagesIdProd(){
-    const {data,loading} = useContext(myProducContext);
-    const [produc,setProduc] = useState(data);
-    const {prod} = useParams();
-
+    const {data,loading} = useContext(myProducContext); 
+    const [produc,setProduc] = useState({});
+    const {prod} = useParams();    
+    
     useEffect(()=>{
-        setProduc(data.find(d => d.id === parseInt(prod)));
+        setProduc(data.find(item => item.id === parseInt(prod)));
     },[prod])
 
     return(
         <div className={idProdStyle.contentIdProd}>
-            {loading && <p>loading</p>}
-            <ProdDetails 
-                produc = {produc}
-            />
+            {
+                loading ? <p>loading..</p> : 
+                <ProdDetails 
+                    produc = {produc}
+                />
+            }
         </div>
     )
 }
