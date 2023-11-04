@@ -6,12 +6,11 @@ import Provider from './contexts/ProductContext.jsx';
 import Category from './contexts/Category.jsx';
 import SidebarContext from './contexts/SidebarContext.jsx';
 import CartContext from './contexts/CartContext.jsx';
-// eslint-disable-next-line no-unused-vars
-import providerAuth from './contexts/AuthContext.jsx';
+import AuthContext from './contexts/AuthContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <providerAuth>
+    <AuthContext>
       <CartContext>
         <SidebarContext>
           <Category>
@@ -21,6 +20,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           </Category>
         </SidebarContext>
       </CartContext>
-    </providerAuth>
+    </AuthContext>
   </React.StrictMode>,
 )

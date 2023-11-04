@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { auth } from "../firebase/FireBase";
 import { createContext, useContext } from "react";
 import { createUserWithEmailAndPassword, 
@@ -7,17 +8,19 @@ import { createUserWithEmailAndPassword,
     signOut 
 } from "firebase/auth"; 
 
-export const authContext = createContext();
+// eslint-disable-next-line react-refresh/only-export-components
+export const providerAuthContext= createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useAuth = () => {
-    const context = useContext(authContext);
+    const context = useContext(providerAuthContext);
     if(!context){
         console.log("error en auteticacion de usuario")
     }
     return context;
 }
 
-export default function providerAuth({ children }){
+export default function AuthContext({ children }){
     const register = async (email,password) => {
         const response = await createUserWithEmailAndPassword(auth,email,password)
         console.log(response)
@@ -39,8 +42,8 @@ export default function providerAuth({ children }){
     }
     
     return (
-        <authContext.Provider value={{register,login,loginGoogle,loginOut}}>
+        <providerAuthContext.Provider value={{register,login,loginGoogle,loginOut}}>
             { children }
-        </authContext.Provider>
+        </providerAuthContext.Provider>
     )
 }

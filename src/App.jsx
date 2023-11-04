@@ -20,7 +20,7 @@ function App() {
           <Route path='/register' Component={PageRegister} />
           <Route path='/login' Component={PageLogin} />
           <Route path='/' Component={PagesHome} />
-          <Route path='/:prod' Component={PagesIdProd}></Route>
+          <Route path='/:prod' Component={PagesIdProd} />
         </Routes>
         <Footer />
       </BrowserRouter>

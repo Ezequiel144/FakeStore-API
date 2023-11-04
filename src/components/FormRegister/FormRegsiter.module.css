@@ -1,54 +1,46 @@
-.contentFormLogin{
-    min-width: 300px;
+.contentFormRegister{
     width: 400px;
 }
-.formulary{
+
+.contentForm{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px 0;
-    padding: 15px;
-    width: 100%;
-}
-
-.contentLogin{
-    display: flex;
-    flex-direction: column;
     gap: 20px 0;
     width: 100%;
+    padding: 15px;
 }
 
 .title{
     width: 100%;
     text-align: center;
-    text-transform: uppercase;
-    font-weight: 600;
     font-family: var(--varTipografyUno);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.contentInputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
 }
 
 .input{
-    padding: 5px 15px;
-    border-radius: 15px;
-    border: 1px solid var(--varColorLetter);
     outline: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--varColorLetter);
 }
 
-.buttonLogin,.buttonLoginGoogle{
+.buttonSubmit{
     padding: 10px;
-    border: 0;
     font-family: var(--varTipografyUno);
-}
-
-.buttonLogin{
+    border: 0;
     background-color: var(--varColorPrimary);
 }
 
-.buttonLoginGoogle{
-    background-color: var(--varColorLetter);
-    color: white;
-}
-
-.register{
+.login{
     padding: 10px;
     border: 1px solid var(--varColorPrimary);
     text-decoration: none;
@@ -56,7 +48,7 @@
     color: var(--varColorLetter);
 }
 
-.register:hover{
+.login:hover{
     border: 0;
     background-color: var(--varColorPrimary);
     transition: 0.3s all;

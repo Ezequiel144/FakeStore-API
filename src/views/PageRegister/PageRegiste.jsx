@@ -1,9 +1,10 @@
-import registerStyle from './PageRegister.moduel.css'
+import FormRegister from '../../components/FormRegister/FormRegister'
+import registerStyle from './PageRegister.module.css'
 
 export default function PageRegister(){
     return(
         <div className={registerStyle.content}>
-            register
+            <FormRegister />
         </div>
     )
 }
